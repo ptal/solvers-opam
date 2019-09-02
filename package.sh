@@ -74,7 +74,8 @@ cp $OPAM_FILE $VERSION_DIR/opam &&
 
 # Create the version tag in the project, and push the changes on github.
 cd $PROJECT_DIR &&
-git tag -a $VERSION_TAG -m "[package] Upgrade to version $VERSION." &&
+git commit -a -m "[release] Update the version number to $VERSION in the OPAM file." &&
+git tag -a $VERSION_TAG -m "[release] Update to version $VERSION." &&
 git push origin $VERSION_TAG &&
 cd - &&
 
@@ -85,4 +86,4 @@ git commit -a -m "[package][$GIT_NAME] Upgrade to version $VERSION_TAG of $GIT_N
 git push &&
 cd - &&
 
-printf "Update to $successful."
+printf "Update successful."
