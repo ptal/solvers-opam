@@ -79,7 +79,7 @@ git push origin $VERSION_TAG &&
 cd - &&
 
 # Commit and push the new version in OPAM_DIR
-cd OPAM_DIR &&
+cd $OPAM_DIR &&
 git add $PACKAGE_DIR/opam &&
 git commit -a -m "[package][$GIT_NAME] Upgrade to version $VERSION_TAG of $GIT_NAME." &&
 git push &&

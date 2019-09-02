@@ -2,7 +2,6 @@
 
 OPAM packages repository for combinatorial solvers (such as constraint programming and SAT solving) and associated tools (such as benchmarking and data sets).
 
-
 To install packages from this repository, use the following command:
 
 ```
