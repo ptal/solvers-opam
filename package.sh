@@ -52,8 +52,11 @@ patch=$(echo $semver | sed -n "s,[0-9]\+.[0-9]\+.\([0-9]\+\),\1,p")
 
 if [ "$UPDATE_KIND" == "major" ]; then
   major=$(($major+1))
+  minor=0
+  patch=0
 elif [ "$UPDATE_KIND" == "minor" ]; then
   minor=$(($minor+1))
+  patch=0
 elif [ "$UPDATE_KIND" == "patch" ]; then
   patch=$(($patch+1))
 fi
@@ -76,14 +79,15 @@ cp $OPAM_FILE $VERSION_DIR/opam &&
 cd $PROJECT_DIR &&
 git commit -a -m "[release] Update the version number to $VERSION in the OPAM file." &&
 git tag -a $VERSION_TAG -m "[release] Update to version $VERSION." &&
-git push origin $VERSION_TAG &&
+git push --follow-tags &&
 cd - &&
 
 # Commit and push the new version in OPAM_DIR
 cd $OPAM_DIR &&
 git add $PACKAGE_DIR/opam &&
 git commit -a -m "[package][$GIT_NAME] Upgrade to version $VERSION_TAG of $GIT_NAME." &&
-git push &&
-cd - &&
+git push
 
+set +x
+cd -
 printf "Update successful."
