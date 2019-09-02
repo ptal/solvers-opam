@@ -24,6 +24,8 @@ depends: [
   "ocaml" {>= "4.07.1"}
   "extlib"
   "containers"
+  "mlgmpidl"
+  "mtime"
   "alcotest" {test}
 ]
 

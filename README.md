@@ -9,6 +9,18 @@ To install packages from this repository, use the following command:
 opam repo add solvers git@github.com:ptal/solvers-opam.git
 ```
 
+## Update your project
+
+Projects in this repository follow [semantic versioning](http://semver.org/) rules.
+We provide a script to automatically update the version of your OPAM project, create the tag on git, add the new version in this repository, and push all the changes online.
+It can be used as follows:
+
+```sh
+./package.sh major ../AbSolute .
+```
+
+Have a look to [package.sh](https://github.com/ptal/solvers-opam/blob/master/package.sh) for more documentation.
+
 ## License
 
 (This section is taken from [opam-repository](https://github.com/ocaml/opam-repository))
