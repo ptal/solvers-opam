@@ -15,10 +15,10 @@ We provide a script to automatically update the version of your OPAM project, cr
 It can be used as follows:
 
 ```sh
-./package.sh major ../AbSolute .
+./publish.sh major ../AbSolute .
 ```
 
-Have a look to [package.sh](https://github.com/ptal/solvers-opam/blob/master/package.sh) for more documentation.
+Have a look to [publish.sh](https://github.com/ptal/solvers-opam/blob/master/publish.sh) for more documentation.
 
 ## License
 
