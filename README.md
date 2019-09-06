@@ -5,7 +5,7 @@ OPAM packages repository for combinatorial solvers (such as constraint programmi
 To install packages from this repository, use the following command:
 
 ```
-opam repo add solvers git@github.com:ptal/solvers-opam.git
+opam repo add solvers git://github.com/ptal/solvers-opam.git
 ```
 
 See the [publishing section](ptal.github.io/contributing.html#publishing) for more information on how to publish your software into this repository.
