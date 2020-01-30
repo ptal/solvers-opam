@@ -1,12 +1,12 @@
 url {
-  src: "https://github.com/ptal/AbSolute/zipball/v0.2.0"
+  src: "https://github.com/ptal/AbSolute/zipball/v0.7.0"
 }
 opam-version: "2.0"
-maintainer: "Pierre Talbot <pierre.talbot@univ-nantes.fr>"
+maintainer: "Pierre Talbot <pierre.talbot@uni.lu>"
 authors: [
   "Marie Pelleau <marie.pelleau@i3s.unice.fr>"
   "Ghiles Ziat <ghiles.ziat@lip6.fr>"
-  "Pierre Talbot <pierre.talbot@univ-nantes.fr>"
+  "Pierre Talbot <pierre.talbot@uni.lu>"
 ]
 homepage: "https://github.com/ptal/AbSolute"
 bug-reports: "https://github.com/ptal/AbSolute/issues"
@@ -21,12 +21,13 @@ run-test: [
 ]
 depends: [
   "dune" {build}
-  "ocaml" {>= "4.07.1"}
+  "ocaml" {>= "4.09.0"}
   "extlib"
   "containers"
+  "minisatml" {>= "0.3.0"}
   "mlgmpidl"
   "mtime"
-  "alcotest" {test}
+  "alcotest"
 ]
 
 synopsis: "AbSolute solver"
